@@ -2,6 +2,19 @@
 
 Project AETHER is an autonomous collision-management simulation platform for LEO constellations. It combines a FastAPI backend, a physics/conjunction engine, an ACM decision layer, and a high-performance Canvas dashboard.
 
+## Submission Demo
+
+1. Start the app with Docker or `uvicorn`, then open `http://localhost:8000`.
+2. Load telemetry or wait for the default snapshot, then let the dashboard auto-run simulation ticks.
+3. Watch the event log, conjunction warnings, maneuver timeline, and export the maneuver CSV from the top bar.
+
+## Judging Highlights
+
+- Safety-first autonomy: conjunction screening, collision probability scoring, and automatic evasion/recovery planning.
+- Efficiency: RTN-based burns, Tsiolkovsky fuel tracking, cooldown enforcement, and deconfliction for competing maneuvers.
+- Strong demo value: live ground track, bullseye risk view, telemetry panel, and maneuver timeline in one dashboard.
+- Production-ready packaging: FastAPI backend, structured JSON logs, Docker image, and end-to-end tests.
+
 ## Architecture
 
 - Backend: FastAPI + NumPy
