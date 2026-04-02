@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orbital Insight</title>
+    <link rel="stylesheet" href="/css/dashboard.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Orbital Insight</h1>
+      <div class="controls">
+        <button id="playPauseBtn">Pause</button>
+        <button id="themeToggleBtn">Light</button>
+        <button id="exportCsvBtn">Export CSV</button>
+        <label for="speedSelect">Speed</label>
+        <select id="speedSelect">
+          <option value="1">1x</option>
+          <option value="2">2x</option>
+          <option value="5">5x</option>
+          <option value="10">10x</option>
+        </select>
+      </div>
+    </header>
+
+    <main class="dashboard-grid">
+      <section class="panel" id="groundTrackPanel">
+        <h2>Ground Track</h2>
+        <canvas id="groundTrackCanvas"></canvas>
+      </section>
+
+      <section class="panel" id="bullseyePanel">
+        <h2>Conjunction Bullseye</h2>
+        <canvas id="bullseyeCanvas"></canvas>
+      </section>
+
+      <section class="panel" id="telemetryPanel">
+        <h2>Telemetry & Resources</h2>
+        <canvas id="telemetryCanvas"></canvas>
+      </section>
+
+      <section class="panel" id="timelinePanel">
+        <h2>Maneuver Timeline</h2>
+        <canvas id="timelineCanvas"></canvas>
+      </section>
+    </main>
+
+    <section class="status-strip">
+      <div>Risk summary: <span id="riskSummary">--</span></div>
+      <div>Deconflicted maneuvers: <span id="deconflictedCount">0</span></div>
+    </section>
+
+    <aside class="event-log">
+      <h2>Event Log</h2>
+      <ul id="eventLogList"></ul>
+    </aside>
+
+    <div id="loadingOverlay" class="overlay">Loading telemetry...</div>
+    <div id="errorBanner" class="error" hidden></div>
+
+    <script type="module" src="/js/app.js"></script>
+  </body>
+</html>

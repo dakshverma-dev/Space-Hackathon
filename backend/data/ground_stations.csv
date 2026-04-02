@@ -1,0 +1,5 @@
+station_id,name,lat_deg,lon_deg,alt_km,elevation_mask_deg
+GS_NAIROBI,Nairobi,-1.286389,36.817223,1.795,10
+GS_ALASKA,Alaska,64.20084,-149.49367,0.2,10
+GS_DARWIN,Darwin,-12.46344,130.84564,0.031,10
+GS_TROLL,Troll,-72.01139,2.535,1.275,10
